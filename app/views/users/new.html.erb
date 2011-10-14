@@ -1,0 +1,23 @@
+<% @user.errors.each do |key, value| %>
+  <div id="<%= key %>"><%= key %><%= value %></div>
+<%end%>
+
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br/>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br/>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.submit "Cadastrar" %>
+  </p>
+
+<% end %>
+
